@@ -1,0 +1,27 @@
+[package]
+name = "glupload"
+version = "0.15.0"
+license = "MIT"
+authors = ["Nicolas Brüggemann"]
+edition = "2018"
+
+[dependencies]
+glutin = "0.21"
+
+failure = "0.1"
+failure_derive = "0.1"
+
+glib = { version = "0.9" }
+gstreamer = { version = "^0.15", git = "https://github.com/sdroege/gstreamer-rs.git", branch="0.15", features=["v1_16"]}
+gstreamer-gl = { version = "^0.15", git = "https://github.com/sdroege/gstreamer-rs.git", branch="0.15", features=["x11", "v1_16"] }
+gstreamer-app = { version = "^0.15", git = "https://github.com/sdroege/gstreamer-rs.git", branch="0.15", features=["v1_16"] }
+gstreamer-video = { version = "^0.15", git = "https://github.com/sdroege/gstreamer-rs.git", branch="0.15", features=["v1_16"] }
+
+[build-dependencies]
+gl_generator = { version = "0.14"}
+
+
+[features]
+gl-x11 = []
+gl-wayland = []
+gl-egl = []
